@@ -1,0 +1,916 @@
+<!--==================================================-->
+<!-- Start Euildint Slider Style Two Area -->
+<!--==================================================-->
+
+<style>
+	.heistory-area {
+		position: relative;
+		margin-bottom: -328px;
+		margin-top: -371px;
+		z-index: 999;
+	}
+
+
+	@media only screen and (max-width: 600px) {
+		.heistory-area {
+			position: relative;
+			margin-bottom: -328px;
+			margin-top: -695px;
+			z-index: 999;
+		}
+	}
+
+	@media screen and (min-width: 2079px) and (min-height: 960px) {
+
+
+		.heistory-area {
+			position: relative;
+			margin-bottom: -328px;
+			margin-top: -111px;
+			z-index: 999;
+		}
+	}
+
+	.banner-carousel .slide-item .image-layer {
+		height: 60vh;
+	}
+
+
+
+	@media only screen and (min-width: 320px) and (max-width: 479px) {
+		.banner-carousel .slide-item {
+			min-height: 813px;
+		}
+	}
+
+	@media screen and (min-width: 2079px) and (min-height: 960px) {
+		.banner-carousel .slide-item .image-layer {
+			height: 79%;
+		}
+
+
+	}
+</style>
+
+<section class="banner-section">
+	<div class="banner-carousel owl-carousel">
+
+		{{#each banners}}
+		<div class="slide-item one">
+			<div class="image-layer" style="background-image: url('/images/banner-images/{{this._id}}.png');"></div>
+			<div class="container">
+				<div class="slider-content style-two wow animate__slideInLeft">
+					<div class="slider-sub-title">
+						<h4>{{this.subtitle}}</h4>
+					</div>
+					<div class="slider-main-title">
+						<h1>{{this.Mheading}}</h1>
+						<h6 class="text-white">{{this.quote}}</h6>
+					</div>
+					<div class="slider-discripton">
+						<p>{{this.desc}}
+						</p>
+					</div>
+					{{!-- <div class="eulding-btn">
+						<a href="{{this.btnlink}}">Get A Quote <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+					</div> --}}
+
+				</div>
+			</div>
+		</div>
+
+		{{/each}}
+	</div>
+</section>
+<!--==================================================-->
+<!-- End Euildint Slider Style Two Area -->
+<!--==================================================-->
+
+{{!-- <div class="about-area style-three wow animate__slideInUp" style="visibility: visible;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-12">
+				<div class="about-thumb style-two wow animate__slideInUp">
+					<img src="assets/img/img6.png" width="90%">
+					<!-- statr about counter -->
+					<div class="about-counter">
+						<div class="about-numbar">
+							<h4 class="counter">13</h4><span>+</span>
+						</div>
+						<div class="about-counter-text">
+							<h5>Years of Experience
+							</h5>
+						</div>
+					</div>
+					<!-- End about counter -->
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-md-12">
+				<div class="section-title">
+					<div class="section-shape">
+					</div>
+					<div class="section-sub-title">
+						<h4>About Us</h4>
+					</div>
+					<div class="section-main-title about">
+						<h2>AFREEN BUILDING MATERIALS TRADING CO. L.L.C (ABMTC)</h2>
+						<h2 class="text-success">ESTABLISHED IN 2006
+						</h2>
+					</div>
+				</div>
+				<div class="about-content wow animate__slideInUp" style="visibility: visible;">
+					<div class="about-discribtion">
+						<p>Afreen Building Materials Trading Co. L.L.C (ABMTC) Established in 2006 headquartered in Abu
+							Dhabi and 2 branches in Abu Dhabi, U.A.E. — is one of the stockiest of Paints, Mechanical,
+							Electrical, Plumbing, Civil Construction, and Oil Field Products. A centralized distribution
+							system, along with fully computerized operations ensures stringent quality checks and
+							superior standards are maintained for delivery times within the schedules provided. ABMTC
+							operates from a full-fledged showroom in Abu Dhabi, Mussafah -M/9, M/14 and SHAHAMA with
+							branches and extensive warehousing facilities. ABMTC is constantly striving to add quality
+							products at affordable prices.</p>
+						<p> ABMTC is striving to ensure total customer satisfaction by providing dedicated service to
+							all levels. We have a team of highly qualified sales professionals who are fully trained to
+							be of service on all strategic business units. ABMTC has been associated with world-class
+							Paint Manufacturer, Mechanical, Electrical Civil Construction, and oil field Products. We
+							believe our services have immensely contributed to the infrastructure development
+							requirements of the country for the past 18 years. Most of the products can be immediately
+							supplied from our ready stock at short notice.</p>
+					</div>
+
+					<div class="about-bottom">
+						<div class="eulding-btn about mt-3">
+							<a href="#">Read More <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> --}}
+
+
+<style>
+	@media only screen and (max-width: 600px) {
+
+
+		.sticky-icon {
+			z-index: 9999;
+			position: fixed;
+			top: 215px;
+			right: 0%;
+			width: 220px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.banner-carousel .slide-item .image-layer {
+			height: 14%;
+		}
+	}
+
+	.counter-area {
+		background: url("images/pimages/img2.png");
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		padding: 65px 51px 65px;
+	}
+
+	.call-do-action-area {
+		padding: 120px 0 120px;
+		background: url("assets/img/bg1.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 458px;
+		background-position: center center;
+	}
+</style>
+<!--==================================================-->
+<!-- Start Euildint History Area -->
+<!--==================================================-->
+<div class="heistory-area animate__slideInUp">
+	<div class="container">
+		<div class="row history-bg">
+			<div class="col-lg-6 col-md-12">
+				<!-- start section title -->
+				<div class="section-title">
+					<div class="section-shape">
+						<i class="bi bi-megaphone" style="font-size:40px;"></i>
+					</div>
+					<div class="section-sub-title">
+						<h4>Know More</h4>
+					</div>
+					<div class="section-main-title">
+						<h3>Afreen Building Material Trading is striving to ensure total customer satisfaction by
+							providing dedicated service to
+							all levels.
+						</h3><br>
+						<p>Founded in 2006 and headquartered in Abu Dhabi, U.A.E., It's a distinguished distributor
+							specializing in Mechanical, Electrical, Plumbing, and oil field products across the United
+							Arab Emirates. Our central location in Mussafah Industrial area M-9, Abu Dhabi.
+							Facilitates quick access to our well-stocked showroom and warehouses, ensuring prompt and
+							reliable service. With a commitment to quality upheld through stringent checks and efficient
+							distribution, Afreen is your trusted partner for MEP and oil field sup-plies, prioritizing
+							customer satisfaction and on-time deliveries. Choose Afreen for a seamless experience in
+							meeting your construction and oil field product needs.</p>
+					</div>
+				</div>
+				<!-- End section title -->
+			</div>
+			<style>
+				li:hover {
+					color: #F60;
+				}
+			</style>
+			<div class="col-lg-6 col-md-6">
+				<div class="history-single-box">
+					<div class="history-content">
+						<h4><a href="#">Our Product Range </a></h4>
+						<p class="mb-4" style="    margin-top: 0px;
+">Lets See Our Product Range!</p>
+						<div class="container">
+							<ul>
+								<li>Pipes & Fitting</li>
+								<li>Valves & Accessories</li>
+								<li>Sanitary ware & Mixers</li>
+								<li>Electrical & HVAC</li>
+								<li>Power Tools</li>
+								<li>Hand Tools & Equipments</li>
+								<li>Hardwires & Safety Equipments</li>
+								<li>Paints</li>
+								<li>Plumbing Machines</li>
+								<li>Water Filters</li>
+								<li>Water Heaters</li>
+								<li>And Many More...</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-12">
+				<div class="row mt-30">
+					<div class="col-lg-4 col-md-6">
+						<div class="history-single-box">
+							<div class="history-content">
+								<h4><a href="#">We Started From 2006</a></h4>
+								<p>The experienced and well-trained commercial team performs business development,
+									marketing & sales activities.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8 col-md-12">
+						<div class="counter-area">
+							<div class="row">
+								<div class="col-lg-4 col-md-4">
+									<!-- start counter single box -->
+									<div class="counter-single-box">
+										<div class="counter-numbar">
+											<h4 class="counter">1000</h4>
+											<span>+</span>
+										</div>
+										<div class="counter-content">
+											<h5>HAPPY CUSTOMERS</h5>
+										</div>
+									</div>
+									<!-- End counter single box -->
+								</div>
+								<div class="col-lg-4 col-md-4">
+									<!-- start counter single box -->
+									<div class="counter-single-box">
+										<div class="counter-numbar">
+											<h4 class="counter">100</h4>
+											<span>+</span>
+										</div>
+										<div class="counter-content">
+											<h5>BRANDS</h5>
+										</div>
+									</div>
+									<!-- End counter single box -->
+								</div>
+								<div class="col-lg-4 col-md-4">
+									<!-- start counter single box -->
+									<div class="counter-single-box">
+										<div class="counter-numbar">
+											<h4 class="counter">18</h4>
+											<span>+</span>
+										</div>
+										<div class="counter-content">
+											<h5>Years of Experience</h5>
+										</div>
+									</div>
+									<!-- End counter single box -->
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--==================================================-->
+<!-- End Euildint History Area -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- Start Euildint Call Do Bg Area -->
+<!--==================================================-->
+<div class="call-do-action-area animate__slideInUp">
+</div>
+
+<!--==================================================-->
+<!-- End Euildint Call Do Bg Area -->
+<!--==================================================-->
+
+<div class="project-area inner-page wow animate__slideInUp">
+	<div class="container">
+		{{!-- <div class="row">
+			<div class="col-lg-12">
+				<div class="section-title text-center">
+					<div class="section-shape">
+					</div>
+					<div class="section-sub-title">
+						<h4>LATEST PRODUCTS</h4>
+					</div>
+					<div class="section-main-title">
+						<h2>Let's Checkout Our Recently </h2>
+						<h2>Added Products</h2>
+					</div>
+				</div>
+			</div>
+		</div> --}}
+		{{!-- <div class="row">
+			<div class="col-md-3 mb-3">
+				<div class="image-card">
+					<img src="assets/img/p1.png" alt="Image 1" class="">
+					<div class="overlay">
+						<p>Valves And Accessories</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 mb-3">
+				<div class="image-card">
+					<img src="assets/img/p2.png" alt="Image 2" class="">
+					<div class="overlay">
+						<p>Mixers And Sanitary Accessories</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 mb-3">
+				<div class="image-card">
+					<img src="assets/img/p3.png" alt="Image 3" class="">
+					<div class="overlay">
+						<p>Pipes And
+							Fittings</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 mb-0">
+				<div class="image-card">
+					<img src="assets/img/p4.png" alt="Image 4" class="">
+					<div class="overlay">
+						<p class="text-center">Hardware’s And
+							Safety Equipment’s</p>
+					</div>
+				</div>
+			</div>
+		</div> --}}
+		<style>
+			.card-img-top {
+				transition: transform 0.3s ease;
+			}
+
+			.card-img-top:hover {
+				transform: scale(0.9);
+			}
+
+			.carousel-control-next,
+			.carousel-control-prev {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				z-index: 1;
+				width: 1rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0;
+				color: #fff;
+				text-align: center;
+				background: 0 0;
+				border: 0;
+				opacity: .5;
+				transition: opacity .15s ease;
+			}
+
+			.imgg3 {
+				margin-right: 0px;
+
+			}
+
+			@media only screen and (max-width: 600px) {
+				.imgg3 {
+					margin-right: 15px;
+
+				}
+			}
+		</style>
+		<div id="carouselExampleControls" style="    margin-bottom: 20px;
+" class="carousel carousel-dark slide mt-5" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class=" container-sm d-flex  justify-content-around">
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/1.jpg">
+								<img src="/images/pimages/1.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/2.jpg">
+								<img src="/images/pimages/2.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/3.jpg">
+								<img src="/images/pimages/3.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item ">
+					<div class=" container-sm d-flex  justify-content-around">
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/4.jpg">
+								<img src="/images/pimages/4.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/5.jpg">
+								<img src="/images/pimages/5.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/6.jpg">
+								<img src="/images/pimages/6.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item ">
+					<div class=" container-sm d-flex  justify-content-around">
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/7.jpg">
+								<img src="/images/pimages/7.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/8.jpg">
+								<img src="/images/pimages/8.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/9.jpg">
+								<img src="/images/pimages/9.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-item ">
+					<div class=" container-sm d-flex  justify-content-around">
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/10.jpg">
+								<img src="/images/pimages/10.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/19.jpg">
+								<img src="/images/pimages/19.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/12.jpg">
+								<img src="/images/pimages/12.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-item ">
+					<div class=" container-sm d-flex  justify-content-around">
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/13.jpg">
+								<img src="/images/pimages/13.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/14.jpg">
+								<img src="/images/pimages/14.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/15.jpg">
+								<img src="/images/pimages/15.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-item ">
+					<div class=" container-sm d-flex  justify-content-around">
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/16.jpg">
+								<img src="/images/pimages/16.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/17.jpg">
+								<img src="/images/pimages/17.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+						<div class="imgg3" style="width: 18rem;">
+							<a href="/images/pimages/18.jpg">
+								<img src="/images/pimages/18.jpg" style="border-radius: 8px;" class="card-img-top"
+									alt="...">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+<style>
+	/* Styling for the image cards */
+	.image-card {
+		position: relative;
+		overflow: hidden;
+	}
+
+	/* Style the curved images using Bootstrap class 'rounded-circle' */
+	.image-card img {
+		transition: transform 0.2s;
+		width: 100%;
+		border-radius: 8px;
+	}
+
+	/* Style the overlay */
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.7);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transition: opacity 0.2s;
+	}
+
+	/* Style the text inside the overlay */
+	.overlay p {
+		color: #fff;
+	}
+
+	/* Add hover effect to the image */
+	.image-card:hover img {
+		transform: scale(1.1);
+		border-radius: 8px;
+
+	}
+
+	/* Show the overlay on hover */
+	.image-card:hover .overlay {
+		opacity: 1;
+		border-radius: 8px;
+
+	}
+
+	.contact-area {
+		background: url("assets/img/bg1.png");
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+	.portfolio-menu {
+		text-align: center;
+	}
+
+	.portfolio-menu ul li {
+		display: inline-block;
+		margin: 0;
+		list-style: none;
+		padding: 10px 15px;
+		cursor: pointer;
+		-webkit-transition: all 05s ease;
+		-moz-transition: all 05s ease;
+		-ms-transition: all 05s ease;
+		-o-transition: all 05s ease;
+		transition: all .5s ease;
+	}
+
+	.portfolio-item {
+		/*width:100%;*/
+	}
+
+	.portfolio-item .item {
+		/*width:303px;*/
+		float: left;
+		margin-bottom: 10px;
+	}
+</style>
+
+
+
+<!--==================================================-->
+<!-- Start Euildint Service Style Two Area -->
+<!--==================================================-->
+
+{{!-- <div class="project-area inner-page wow animate__slideInUp">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<!-- start section title -->
+				<div class="section-title text-center">
+					<div class="section-shape">
+					</div>
+					<div class="section-sub-title">
+						<h4>LATEST PRODUCTS</h4>
+					</div>
+					<div class="section-main-title">
+						<h2>Let's Checkout Our Recently </h2>
+						<h2>Added Products</h2>
+					</div>
+				</div>
+				<!-- End section title -->
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="image-card">
+					<img src="assets/img/pr1.png" alt="Image 1" class="">
+					<div class="overlay">
+						<p>Waste Bin
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="image-card">
+					<img src="assets/img/pr2.png" alt="Image 2" class="">
+					<div class="overlay">
+						<p>Sink Mixer
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="image-card">
+					<img src="assets/img/pr3.png" alt="Image 3" class="">
+					<div class="overlay">
+						<p>WC paper Holder
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="image-card">
+					<img src="assets/img/pr4.png" alt="Image 4" class="">
+					<div class="overlay">
+						<p class="text-center">Shower Head
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<center>
+			<a href="" class="btn btn-dark w-25 mt-5">View More Products</a>
+		</center>
+	</div>
+</div> --}}
+
+<style>
+	.card {
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.card:hover {
+		transform: scale(1.1);
+	}
+</style>
+
+<div class="project-area inner-page wow animate__slideInUp">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<!-- start section title -->
+				<div class="section-title text-center">
+					<div class="section-shape">
+					</div>
+					<div class="section-sub-title">
+						<h4>Brands</h4>
+					</div>
+					<div class="section-main-title">
+						<h2>Our Brands </h2>
+					</div>
+				</div>
+				<!-- End section title -->
+			</div>
+		</div>
+		<div class="row">
+			{{#each brands}}
+
+			<div class="col-md-3 col-sm-2 col-lg-3  mb-3">
+				<a href="/brd-view/{{this.name}}">
+					<div class="card p-3 shadow">
+						<center>
+							<img src="/images/brand-images/{{this._id}}.png" width="100%">
+						</center>
+					</div>
+				</a>
+			</div>
+
+			{{/each}}
+
+
+		</div>
+	</div>
+</div>
+
+
+
+<!--==========
+	========================================-->
+<!-- End Search Popup Area -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- Start scrollup section Area -->
+<!--==================================================-->
+<!-- scrollup section -->
+{{!-- <div class="scroll-area">
+	<div class="top-wrap">
+		<div class="go-top-btn-wraper">
+			<div class="go-top go-top-button">
+				<i class="fas fa-arrow-up"></i>
+				<i class="fas fa-arrow-up"></i>
+			</div>
+		</div>
+	</div>
+</div> --}}
+
+<!--==================================================-->
+<!-- End scrollup section Area -->
+<!--==================================================-->
+
+
+
+<div class="contact-us-area" id="contact">
+	<div class="container">
+		<h2 class="text-center">Contact Us</h2><br><br><br>
+		<div class="row mb-150">
+			<div class="col-lg-4 col-md-6">
+				<div class="contact-single-box">
+					<div class="contact-icon">
+						<i class="bi bi-telephone-x"></i>
+					</div>
+					<div class="contact-content">
+						<h4>Phone Number</h4>
+						<a href="tel:97122049016" style="text-decoration: none;">
+							<span>Tele -
+								(+971) 22049016</span></a>
+						<a href="tel:97125559315" style="text-decoration: none;">
+							<span> Fax-
+								(+971) 25559315</span></a>
+						<a href="tel:971526291730" style="text-decoration: none;">
+							<span>Mobile
+								-(+971) 526291730</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="contact-single-box">
+					<div class="contact-icon">
+						<i class="bi bi-envelope-open"></i>
+					</div>
+					<div class="contact-content">
+						<h4>E-mail</h4>
+						<a href="mailto:sales@afreenuae.com" style="text-decoration: none;">
+							<span>sales@afreenuae.com</span></a>
+						<a href="mailto:accounts@afreenuae.com" style="text-decoration: none;">
+							<span>accounts@afreenuae.com</span></a>
+						<a href="mailto:purchase@afreenuae.com" style="text-decoration: none;">
+							<span>purchase@afreenuae.com</span></a>
+
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="contact-single-box two">
+					<div class="contact-icon">
+						<i class="bi bi-geo-alt"></i>
+					</div>
+					<div class="contact-content">
+						<h4>Address</h4>
+						<a href="https://www.google.com/maps/search/P.O.+Box:+35417,+M9+Mussafah+Abu+Dhabi/@24.3776191,54.5006525,16z/data=!3m1!4b1?entry=ttu"
+							target="_blank" style="text-decoration: none;">
+							<span>P.O. Box: 35417, M9</span>
+							<span>Mussafah Abu Dhabi - UAE</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row contact">
+			<div class="contact-box" id="support">
+				<div class="contact-title">
+					<h2>Have any question?</h2>
+					<h2>Feel Free to Contact</h2>
+				</div>
+				<form action="/contact" method="POST" id="it-form">
+					<input type="hidden" name="date" id="datetime">
+
+					<div class="row">
+						<div class="col-lg-6 col-md-6">
+							<div class="form-box">
+								<input type="text" name="fname" placeholder="First Name">
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div class="form-box">
+								<input type="text" name="lname" placeholder="Last Name">
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div class="form-box">
+								<input type="text" name="phone" placeholder="Phone">
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div class="form-box">
+								<input type="text" name="email" placeholder="Email Address">
+							</div>
+						</div>
+						<div class="col-lg-12 col-md-12">
+							<div class="form-box">
+								<input type="text" name="subject" placeholder="Subject">
+							</div>
+						</div>
+
+						<div class="col-lg-12 col-md-12">
+							<div class="form-box">
+								<textarea name="massage" id="massage" cols="30" rows="10"
+									placeholder="Comment"></textarea>
+							</div>
+						</div>
+						<div class="col-lg-12 col-md-12">
+							<div class="form-box-button inner">
+								<button type="Submit">Send Message</button>
+							</div>
+						</div>
+					</div>
+				</form>
+				<div id="status"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br><br><br><br><br><br><br><br><br>

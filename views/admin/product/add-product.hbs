@@ -1,0 +1,92 @@
+<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+  data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+  <div class="page-wrapper">
+    <div class="container">
+      <br>
+      <h2>Add Products</h2>
+      <br>
+      <div class="card">
+        <div class="card-body">
+
+          <form action="/admin/product/add-product" enctype="multipart/form-data" method="POST">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Title</label>
+              <input type="text" name="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Category</label>
+              <select class="form-select" name="category" aria-label="Default select example" required>
+                <option value="" selected>Select Category</option>
+                {{#each categories}}
+                <option value="{{this.name}}">{{this.name}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Sub Category</label>
+              <select class="form-select" name="subcategory" aria-label="Default select example" >
+                <option value="" selected>Select Category</option>
+                {{#each subproducts}}
+                <option value="{{this.name}}">{{this.name}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Sub-subCategory</label>
+              <select class="form-select" name="subsubcategory" aria-label="Default select example" >
+                <option value="" selected>Select Category</option>
+                {{#each subcategories}}
+                <option value="{{this.name}}">{{this.name}}</option>
+                {{/each}}
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Brand</label>
+              <select class="form-select" name="brand" aria-label="Default select example" required>
+                <option value="" selected>Select Brand</option>
+                {{#each brands}}
+                <option value="{{this.name}}">{{this.name}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Description (Optional)</label>
+              <input type="text" name="desc" class="form-control">
+            </div>
+            <hr>
+            {{!-- <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Size</label>
+              <input type="text" name="size" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Model No</label>
+              <input type="text" name="model" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Material</label>
+              <input type="text" name="material" class="form-control">
+            </div> --}}
+
+
+            <div class="mb-4">
+              <label for="exampleInputPassword1" class="form-label">Image</label><br>
+              <input type="file" name="Image" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-5 w-100">Submit</button>
+
+          </form>
+
+
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

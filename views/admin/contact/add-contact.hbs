@@ -1,0 +1,42 @@
+<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+  data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+  <div class="page-wrapper">
+    <div class="container">
+      <br>
+      <h2>Add Contact</h2>
+      <br>
+      <div class="card">
+        <div class="card-body">
+
+          <form action="/admin/contact/add-contact" enctype="multipart/form-data" method="POST">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+              <input type="number" name="Phone" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" name="Email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Location</label>
+              <input type="text" name="Location" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Map Link</label>
+              <input type="text" name="maplink" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-5 w-100">Submit</button>
+
+          </form>
+
+
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

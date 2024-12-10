@@ -1,0 +1,81 @@
+<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+  data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+  <div class="page-wrapper">
+    <div class="container">
+      <br>
+      <h2>Site Settings</h2>
+      <br>
+      {{!-- <a href="/admin/site/add-site" class="btn btn-primary mb-3">+ Add Site</a> --}}
+      {{#each sites}}
+      <a href="/admin/site/edit-site/{{this._id}}" class="btn btn-dark mb-3">Edit Settings</a>
+      {{/each}}
+
+      <div class="card">
+        <div class="card-body">
+
+
+          <form>
+            {{#each sites}}
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Site Name</label>
+              <input type="text" value="{{this.Sname}}" name="Sname" class="form-control" disabled>
+            </div>
+            {{!-- <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Site Address</label>
+              <input type="text" value="{{this.Saddress}}" name="Saddress" class="form-control" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Site Phone Number</label>
+              <input type="number" value="{{this.Sphone}}" name="Sphone" class="form-control" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Site Email Address</label>
+              <input type="email" value="{{this.Semail}}" name="Semail" class="form-control" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Site Location Address</label>
+              <input type="email" value="{{this.Slocation}}" name="Slocation" class="form-control" disabled>
+            </div> --}}
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Site Logo</label><br>
+              <div style="background-color: ; width:70%; padding:10px">
+                <a href="/images/site-images/{{this._id}}.png">
+                  <img src="/images/site-images/{{this._id}}.png" name="Image" class="image-fluid" width="30%"></a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-4 mb-3">
+                <label class="form-label">Site Primary Color</label>
+                <input type="color" value="{{this.primarycolor}}" name="primarycolor" style="width: 100%;"
+                  class="form-control" id="colorPicker" disabled>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <label class="form-label">Site Secondary Color</label>
+                <input type="color" value="{{this.secondarycolor}}" name="secondarycolor" style="width: 100%;"
+                  class="form-control" id="colorPicker" disabled>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <label class="form-label">Navigation Bar Color</label>
+                <input type="color" value="{{this.btncolor}}" name="btncolor" style="width: 100%;" class="form-control"
+                  id="colorPicker" disabled>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <label class="form-label">Navigation Bar Text Color</label>
+                <input type="color" value="{{this.navtext}}" name="navtext" style="width: 100%;" class="form-control"
+                  id="colorPicker" disabled>
+              </div>
+            </div>
+            {{/each}}
+          </form>
+
+
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

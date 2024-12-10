@@ -1,0 +1,62 @@
+<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+    data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+    <div class="page-wrapper">
+        <div class="container">
+            <br>
+            <h2>All Feedbacks & Supports</h2>
+            <br>
+
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="zero_config" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Date</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
+                                    <th>Delete</th>
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each supports}}
+                                <tr>
+                                    <td>{{incremented @index}}</td>
+                                    <td>{{this.date}}</td>
+                                    <td>{{this.fname}}</td>
+                                    <td>{{this.lname}}</td>
+                                    <td>{{this.phone}}</td>
+                                    <td>{{this.email}}</td>
+                                    <td>{{this.subject}}</td>
+                                    <td>{{this.massage}}</td>
+                                    <td><a href="/admin/delete-support/{{this._id}}" class="btn btn-danger"
+                                            onclick="return confirm('Are You Sure to Delete {{this.fname}} ?')"><i
+                                                class="fa fa-trash" aria-hidden="true"></i></a></td>
+
+
+                                </tr>
+                                {{/each}}
+
+
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

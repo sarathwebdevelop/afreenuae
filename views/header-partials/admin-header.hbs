@@ -1,0 +1,276 @@
+<style>
+  #main-wrapper .left-sidebar[data-sidebarbg=skin5],
+  #main-wrapper .left-sidebar[data-sidebarbg=skin5] ul {
+    background: #064c93;
+  }
+
+  #main-wrapper .topbar .top-navbar .navbar-header[data-logobg=skin5] {
+    background: #000000;
+  }
+
+  #navbarSupportedContent {
+    background: #064c93 !important;
+  }
+</style>
+<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+  data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+  <header class="topbar" data-navbarbg="skin5">
+    <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+      <div class="navbar-header" data-logobg="skin5">
+        <!-- ============================================================== -->
+        <!-- Logo -->
+        <!-- ============================================================== -->
+        <a class="navbar-brand" href="/">
+          <!-- Logo icon -->
+          <b class="logo-icon ps-2">
+            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+            <!-- Dark Logo icon -->
+            {{!-- <img src="/assets/img/logo1.png" alt="homepage" class="light-logo" width="25" /> --}}
+          </b>
+          <!--End Logo icon -->
+          <!-- Logo text -->
+          <span class="logo-text ms-2">
+            <!-- dark Logo text -->
+            <img src="/assets/img/logo1.png" style="width: 160px;" alt="homepage" class="light-logo" />
+          </span>
+          <!-- Logo icon -->
+          <!-- <b class="logo-icon"> -->
+          <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+          <!-- Dark Logo icon -->
+          <!-- <img src="/assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
+
+          <!-- </b> -->
+          <!--End Logo icon -->
+        </a>
+        <!-- ============================================================== -->
+        <!-- End Logo -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Toggle which is visible on mobile only -->
+        <!-- ============================================================== -->
+        <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+            class="ti-menu ti-close"></i></a>
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Logo -->
+      <!-- ============================================================== -->
+      <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+        <!-- ============================================================== -->
+        <!-- toggle and nav items -->
+        <!-- ============================================================== -->
+        <ul class="navbar-nav float-start me-auto">
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)"
+              data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a>
+          </li>
+
+          {{!-- <li class="nav-item search-box">
+            <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i
+                class="mdi mdi-magnify fs-4"></i></a>
+            <form class="app-search position-absolute">
+              <input type="text" class="form-control" placeholder="Search &amp; enter" />
+              <a class="srh-btn"><i class="mdi mdi-window-close"></i></a>
+            </form>
+          </li> --}}
+        </ul>
+        <!-- ============================================================== -->
+        <!-- Right side toggle and nav items -->
+        <!-- ============================================================== -->
+        <ul class="navbar-nav float-end">
+          <!-- ============================================================== -->
+          <!-- Comment -->
+          <!-- ============================================================== -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="mdi mdi-bell font-24"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">No Notifications</a></li>
+
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="
+                    nav-link
+                    dropdown-toggle
+                    text-muted
+                    waves-effect waves-dark
+                    pro-pic
+                  " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="/images/user.jpg" alt="user" class="rounded-circle" width="31" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+
+              <div class="dropdown-divider"></div>
+              <div class="ps-4 p-10">
+                {{#if administator}}
+                <h5 class="text-center">Hi, {{administator.Name}}</h5>
+                <a href="/admin/signout" class="btn btn-danger btn-rounded w-100 text-white">Logout</a>
+                {{/if}}
+
+              </div>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="left-sidebar" data-sidebarbg="skin5">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+      <!-- Sidebar navigation-->
+      <nav class="sidebar-nav">
+        <ul id="sidebarnav" class="pt-4">
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin" aria-expanded="false"><i
+                class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/product/all-products"
+              aria-expanded="false"><i class="mdi mdi-cart"></i><span class="hide-menu">Products</span></a>
+          </li>
+          {{!-- <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/subproduct/all-subproducts"
+              aria-expanded="false"><i class="mdi mdi-cart"></i><span class="hide-menu">Sub Products</span></a>
+          </li> --}}
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/category/all-categories"
+              aria-expanded="false"><i class="mdi mdi-menu"></i><span class="hide-menu">Main
+                Category</span></a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/subproduct/all-subproducts"
+              aria-expanded="false"><i class="mdi mdi-cart"></i><span class="hide-menu">Sub Category</span></a>
+          </li>
+
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+              href="/admin/subsubcategory/all-subsubcategories" aria-expanded="false"><i class="mdi mdi-cart"></i><span
+                class="hide-menu">Sub Sub Category</span></a>
+          </li>
+
+          
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/all-sites"
+              aria-expanded="false"><i class="mdi mdi-settings"></i><span class="hide-menu">Site Settings</span></a>
+          </li>
+
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/all-banners"
+              aria-expanded="false"><i class="mdi mdi-image"></i><span class="hide-menu">Home Banner</span></a>
+          </li>
+
+
+          <li class="sidebar-item">
+            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                class="mdi mdi-menu"></i><span class="hide-menu">About Us </span></a>
+            <ul aria-expanded="false" class="collapse first-level">
+              <li class="sidebar-item">
+                <a href="/admin/about/all-abouts" class="sidebar-link"><i class="bi bi-arrow-right-circle"></i></i><span
+                    class="hide-menu">About us</span></a>
+              </li>
+              <li class="sidebar-item">
+                <a href="/admin/about/all-missions" class="sidebar-link"><i
+                    class="bi bi-arrow-right-circle"></i></i><span class="hide-menu">Mission</span></a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="/admin/about/all-visions" class="sidebar-link"><i
+                    class="bi bi-arrow-right-circle"></i></i><span class="hide-menu">Vision</span></a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="/admin/about/all-policies" class="sidebar-link"><i
+                    class="bi bi-arrow-right-circle"></i></i><span class="hide-menu">Quality Policy</span></a>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="/admin/about/all-teams" class="sidebar-link"><i class="bi bi-arrow-right-circle"></i></i><span
+                    class="hide-menu">Team</span></a>
+              </li>
+            </ul>
+          </li>
+
+
+
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/all-supports"
+              aria-expanded="false"><i class="mdi mdi-help-circle"></i><span class="hide-menu">Feedbacks &
+                Supports</span></a>
+          </li>
+
+
+
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/social/all-socials"
+              aria-expanded="false"><i class="bi bi-person-circle"></i><span class="hide-menu">Social Media
+                Management</span></a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/gallery/all-galleries"
+              aria-expanded="false"><i class="mdi mdi-image"></i><span class="hide-menu">Gallery</span></a>
+          </li>
+
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/store/all-stores"
+              aria-expanded="false"><i class="mdi mdi-cart"></i><span class="hide-menu">Shops</span></a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/brand/all-brands"
+              aria-expanded="false"><i class="mdi mdi-cart"></i><span class="hide-menu">Brands</span></a>
+          </li>
+
+
+
+
+
+          <li class="sidebar-item">
+            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                class="mdi mdi-menu"></i><span class="hide-menu">Pumps </span></a>
+            <ul aria-expanded="false" class="collapse first-level">
+              <li class="sidebar-item">
+                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/pump/all-pumps"
+                  aria-expanded="false"><i class="bi bi-cursor"></i><span class="hide-menu">Pump Category</span></a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/pump/all-pumpproducts"
+                  aria-expanded="false"><i class="bi bi-cursor"></i><span class="hide-menu">Pump Products</span></a>
+              </li>
+
+            </ul>
+          </li>
+
+
+
+
+
+          <li class="sidebar-item">
+            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                class="mdi mdi-menu"></i><span class="hide-menu">Mep </span></a>
+            <ul aria-expanded="false" class="collapse first-level">
+              <li class="sidebar-item">
+                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/mep/all-meps"
+                  aria-expanded="false"><i class="bi bi-cursor"></i><span class="hide-menu">Mep Category</span></a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/mep/all-mepproducts"
+                  aria-expanded="false"><i class="bi bi-cursor"></i><span class="hide-menu">Mep Products</span></a>
+              </li>
+
+            </ul>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+  </aside>

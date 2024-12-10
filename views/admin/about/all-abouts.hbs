@@ -1,0 +1,75 @@
+<div id='main-wrapper' data-layout='vertical' data-navbarbg='skin5' data-sidebartype='full'
+  data-sidebar-position='absolute' data-header-position='absolute' data-boxed-layout='full'>
+  <div class='page-wrapper'>
+    <div class='container'>
+      <br />
+      <h2>
+        About Us
+      </h2>
+      <br />
+      {{!-- <a href='/admin/about/add-about' class='btn btn-primary mb-3'>
+        + Add about
+      </a> --}}
+      {{#each abouts}}
+      <a href="/admin/about/edit-about/{{this._id}}" class='btn btn-dark mb-3'>
+        Edit About
+      </a>
+      {{/each}}
+
+      <div class='card'>
+        <div class='card-body'>
+          <div class='table-responsive'>
+            <table id='zero_config' class='table table-striped table-bordered'>
+              <thead>
+                <tr>
+                  <th>
+                    No.
+                  </th>
+                  <th>
+                    Sub Heading
+                  </th>
+                  <th>
+                    Main Heading
+                  </th>
+                  <th>
+                    Description
+                  </th>
+
+                  <th>
+                    Background img
+                  </th>
+
+                </tr>
+              </thead>
+              <tbody>
+                {{#each abouts}}
+                <tr>
+                  <td>
+                    {{incremented @index}}
+                  </td>
+                  <td>
+                    {{this.subtitle}}
+                  </td>
+                  <td>
+                    {{this.Mheading}}
+                  </td>
+                  <td>
+                    {{this.desc}}
+                  </td>
+
+                  <td>
+                    <a href="/images/about-images/{{this._id}}.png">
+                      <img src="/images/about-images/{{this._id}}.png" name='Image' class='image-fluid' width='100%' />
+                    </a>
+                  </td>
+
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

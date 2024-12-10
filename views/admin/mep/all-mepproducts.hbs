@@ -1,0 +1,54 @@
+<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+  data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+  <div class="page-wrapper">
+    <div class="container">
+      <br>
+      <h2>Manage MEP</h2>
+      <br>
+      <a href="/admin/mep/add-mepproduct" class="btn btn-primary mb-3">+ Add Mep Products</a>
+
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table id="zero_config" class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Mep Product Name</th>
+                  <th>Category</th>
+                  <th>Mep Product Image</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                {{#each mepproducts}}
+                <tr>
+                  <td>{{incremented @index}}</td>
+                  <td>{{this.name}}</td>
+                  <td>{{this.category}}</td>
+                  <td> <a href="/images/mepproduct-images/{{this._id}}.png">
+                      <img src="/images/mepproduct-images/{{this._id}}.png" name="Image" class="image-fluid"
+                        width="40%"></a>
+                  </td>
+
+                  <td><a href="/admin/mep/edit-mepproduct/{{this._id}}" class="btn btn-dark mb-3"><i
+                        class="bi bi-pencil-square" aria-hidden="true"></i></a></td>
+                  <td><a href="/admin/mep/delete-mepproduct/{{this._id}}" class="btn btn-danger"
+                      onclick="return confirm('Are You Sure to Delete ?')"><i class="fa fa-trash"
+                        aria-hidden="true"></i></a></td>
+
+
+                </tr>
+                {{/each}}
+              </tbody>
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

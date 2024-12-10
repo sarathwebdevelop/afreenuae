@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Welcome To Afreen Building Materials Trading L.L.C </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico?v=2">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css" media="all">
+    <!-- carousel CSS -->
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css" type="text/css" media="all">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="/assets/css/animate.css" type="text/css" media="all">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="/assets/css/animate.min.css" type="text/css" media="all">
+    <!-- animated-text CSS -->
+    <link rel="stylesheet" href="/assets/css/animated-text.css" type="text/css" media="all">
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="/assets/css/all.min.css" type="text/css" media="all">
+    <!-- font-flaticon CSS -->
+    <link rel="stylesheet" href="/assets/css/flaticon.css" type="text/css" media="all">
+    <!-- theme-default CSS -->
+    <link rel="stylesheet" href="/assets/css/theme-default.css" type="text/css" media="all">
+    <!-- meanmenu CSS -->
+    <link rel="stylesheet" href="/assets/css/meanmenu.min.css" type="text/css" media="all">
+    <!-- transitions CSS -->
+    <link rel="stylesheet" href="/assets/css/owl.transitions.css" type="text/css" media="all">
+    <!-- venobox CSS -->
+    <link rel="stylesheet" href="/venobox/venobox.css" type="text/css" media="all">
+
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="/assets/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/slick/slick-theme.css" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/owl.theme.default.min.css" />
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="/assets/css/bootstrap-icons.css" type="text/css" media="all">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all">
+
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css" media="all">
+
+    <!-- modernizr js -->
+    <script src="/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+
+</head>
+<style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+    .header-area.style-two {
+        margin-bottom: 0px;
+        background: #fff;
+        z-index: 99;
+    }
+
+    .header-munu {
+        background-size: cover;
+        left: 0%;
+        text-align: center;
+        margin-top: -35px;
+    }
+
+    .header-social.style-two {
+        margin-left: 90px;
+    }
+
+    .slider-content.style-two {
+        top: 35%;
+    }
+
+    .banner-carousel .slide-item .image-layer {
+        height: 78%;
+    }
+
+    .about-area.style-three {
+        padding: 120px 0 194px;
+        margin-top: -225px;
+    }
+
+    .float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+    }
+
+    .bi-whatsapp::before {
+        content: "\f618";
+        margin-top: 14px;
+    }
+
+    .my-float {
+        margin-top: 16px;
+    }
+</style>
+
+<body>
+    {{#if admin}}
+    {{>admin-header}}
+    {{else}}
+    {{>user-header}}
+    {{/if}}
+
+    {{{body}}}
+    {{>user-footer}}
+
+
+    <!-- jquery js -->
+    <script src="/assets/js/vendor/jquery-3.6.2.min.js"></script>
+
+    <script src="/assets/js/popper.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- carousel js -->
+    <script src="/assets/js/owl.carousel.min.js"></script>
+
+    <!-- counterup js -->
+    <script src="/assets/js/jquery.counterup.min.js"></script>
+
+    <!-- waypoints js -->
+    <script src="/assets/js/waypoints.min.js"></script>
+
+    <!-- wow js -->
+    <script src="/assets/js/wow.min.js"></script>
+
+    <!-- imagesloaded js -->
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+
+    <!-- venobox js -->
+    <script src="/venobox/venobox.js"></script>
+
+    <!--  animated-text js -->
+    <script src="/assets/js/animated-text.js"></script>
+
+    <!-- Slick Slider -->
+    <script src="/assets/slick/slick.min.js"></script>
+
+    <!-- venobox min js -->
+    <script src="/venobox/venobox.min.js"></script>
+
+    <!-- isotope js -->
+    <script src="/assets/js/isotope.pkgd.min.js"></script>
+
+    <!-- jquery meanmenu js -->
+    <script src="/assets/js/jquery.meanmenu.js"></script>
+
+    <!-- jquery scrollup js -->
+    <script src="/assets/js/jquery.scrollUp.js"></script>
+
+    <script src="/assets/js/jquery.barfiller.js"></script>
+    <!-- jquery js -->
+
+    <!-- theme js -->
+    <script src="/assets/js/theme.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".blantershow-chat").trigger("click");
+        });
+        /* Whatsapp Chat Widget by www.bloggermix.com */
+        $(document).on("click", "#send-it", function () {
+            var a = document.getElementById("chat-input");
+            if ("" != a.value) {
+                var b = $("#get-number").text(),
+                    c = document.getElementById("chat-input").value,
+                    d = "https://web.whatsapp.com/send",
+                    e = b,
+                    f = "&text=" + c;
+                if (
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                        navigator.userAgent
+                    )
+                )
+                    var d = "whatsapp://send";
+                var g = d + "?phone=+971 52 629 1730" + e + f;
+                window.open(g, "_blank");
+            }
+        }),
+            $(document).on("click", ".informasi", function () {
+                (document.getElementById("get-number").innerHTML = $(this)
+                    .children(".my-number")
+                    .text()),
+                    $(".start-chat,.get-new")
+                        .addClass("show")
+                        .removeClass("hide"),
+                    $(".home-chat,.head-home")
+                        .addClass("hide")
+                        .removeClass("show"),
+                    (document.getElementById("get-nama").innerHTML = $(this)
+                        .children(".info-chat")
+                        .children(".chat-nama")
+                        .text()),
+                    (document.getElementById("get-label").innerHTML = $(this)
+                        .children(".info-chat")
+                        .children(".chat-label")
+                        .text());
+            }),
+            $(document).on("click", ".close-chat", function () {
+                $("#whatsapp-chat")
+                    .addClass("hide")
+                    .removeClass("show");
+            }),
+            $(document).on("click", ".blantershow-chat", function () {
+                $("#whatsapp-chat")
+                    .addClass("show")
+                    .removeClass("hide");
+            });
+
+    </script>

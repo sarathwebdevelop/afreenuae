@@ -1,0 +1,78 @@
+<style>
+    .breatcome-area {
+        background: url(/img/bg4.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 154px 0;
+    }
+
+    .blog-content.style-two {
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: -16px;
+    }
+</style>
+
+
+<!--==================================================-->
+<!-- Start Thrown Bratcome Area -->
+<!--==================================================-->
+<div class="breatcome-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="breatcome-content">
+                    <div class="breatcome-title">
+                        <h1 class="text-center">Gallery</h1>
+                    </div>
+                    <div class="bratcome-text">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li>Gallery
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="team-area inner-page wow animate__slideInUp" style="visibility: visible;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- start section title -->
+                <div class="section-title text-center">
+
+                    <div class="section-sub-title">
+                        <h4>Gallery</h4>
+                    </div>
+                    <div class="section-main-title">
+                        <h2>Gallery </h2>
+                    </div>
+                </div>
+                <!-- End section title -->
+            </div>
+        </div>
+        <div class="row">
+            {{#each galleries}}
+            <div class="col-lg-3 col-md-6 mb-4">
+                <!-- start team items-box -->
+                <div class="team-items-box wow animate__zoomIn" style="visibility: visible;">
+                    <div class="team-thumb">
+                        <a href="/images/gallery-images/{{this._id}}.png">
+                            <img src="/images/gallery-images/{{this._id}}.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- End team items-box -->
+            </div>
+            {{/each}}
+
+
+
+
+        </div>
+    </div>
+</div>

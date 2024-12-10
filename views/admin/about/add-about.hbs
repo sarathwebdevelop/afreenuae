@@ -1,0 +1,47 @@
+<div id='main-wrapper' data-layout='vertical' data-navbarbg='skin5' data-sidebartype='full'
+  data-sidebar-position='absolute' data-header-position='absolute' data-boxed-layout='full'>
+  <div class='page-wrapper'>
+    <div class='container'>
+      <br />
+      <h2>
+        Add About
+      </h2>
+      <br />
+      <div class='card'>
+        <div class='card-body'>
+          <form action='/admin/about/add-about' enctype='multipart/form-data' method='POST'>
+            <div class='mb-3'>
+              <label for='exampleInputEmail1' class='form-label'>
+                Sub Heading
+              </label>
+              <input type='text' name='subtitle' class='form-control' />
+            </div>
+            <div class='mb-3'>
+              <label for='exampleInputEmail1' class='form-label'>
+                Main Heading
+              </label>
+              <input type='text' name='Mheading' class='form-control' required />
+            </div>
+            <div class='mb-3'>
+              <label for='exampleInputEmail1' class='form-label'>
+                Description
+              </label>
+              <input type='text' name='desc' class='form-control' />
+            </div>
+            <div class='mb-4'>
+              <label for='exampleInputPassword1' class='form-label'>
+                Image
+              </label>
+              <br />
+              <input type='file' name='Image' class='form-control' required />
+            </div>
+
+            <button type='submit' class='btn btn-primary mt-5 w-100'>
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

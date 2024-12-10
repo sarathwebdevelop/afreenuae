@@ -1,0 +1,72 @@
+<div id='main-wrapper' data-layout='vertical' data-navbarbg='skin5' data-sidebartype='full'
+    data-sidebar-position='absolute' data-header-position='absolute' data-boxed-layout='full'>
+    <div class='page-wrapper'>
+        <div class='container'>
+            <br />
+            <h2>
+                policy
+            </h2>
+            <br />
+            {{!-- <a href='/admin/about/add-policy' class='btn btn-primary mb-3'>
+                + Add policy
+            </a> --}}
+            {{#each policies}}
+            <a href="/admin/about/edit-policy/{{this._id}}" class='btn btn-dark mb-3'>
+                Edit policy
+            </a>
+            {{/each}}
+
+            <div class='card'>
+                <div class='card-body'>
+                    <div class='table-responsive'>
+                        <table id='zero_config' class='table table-striped table-bordered'>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        No.
+                                    </th>
+                                    <th>
+                                        Heading
+                                    </th>
+
+                                    <th>
+                                        Description
+                                    </th>
+
+                                    <th>
+                                        img
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each policies}}
+                                <tr>
+                                    <td>
+                                        {{incremented @index}}
+                                    </td>
+                                    <td>
+                                        {{this.heading}}
+                                    </td>
+
+                                    <td>
+                                        {{this.desc}}
+                                    </td>
+
+                                    <td>
+                                        <a href="/images/policy-images/{{this._id}}.png">
+                                            <img src="/images/policy-images/{{this._id}}.png" name='Image'
+                                                class='image-fluid' width='100%' />
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

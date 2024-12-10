@@ -1,0 +1,85 @@
+<div
+  id='main-wrapper'
+  data-layout='vertical'
+  data-navbarbg='skin5'
+  data-sidebartype='full'
+  data-sidebar-position='absolute'
+  data-header-position='absolute'
+  data-boxed-layout='full'
+>
+  <div class='page-wrapper'>
+    <div class='container'>
+      <br />
+      <h2>
+        Section One
+      </h2>
+      <br />
+      {{! <a href='/admin/sone/add-sone' class='btn btn-primary mb-3'>
+        + Add about
+      </a> }}
+      {{#each sones}}
+        <a href="/admin/sone/edit-sone/{{this._id}}" class='btn btn-dark mb-3'>
+          Edit Section
+        </a>
+      {{/each}}
+
+      <div class='card'>
+        <div class='card-body'>
+          <div class='table-responsive'>
+            <table id='zero_config' class='table table-striped table-bordered'>
+              <thead>
+                <tr>
+                  <th>
+                    No.
+                  </th>
+
+                  <th>
+                    Main Heading
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                  <th>
+                    Button Link
+                  </th>
+                  <th>
+                    Background img
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each sones}}
+                  <tr>
+                    <td>
+                      {{incremented @index}}
+                    </td>
+
+                    <td>
+                      {{this.Mheading}}
+                    </td>
+                    <td>
+                      {{this.desc}}
+                    </td>
+                    <td>
+                      {{this.btnlink}}
+                    </td>
+                    <td>
+                      <a href="/images/sone-images/{{this._id}}.png">
+                        <img
+                          src="/images/sone-images/{{this._id}}.png"
+                          name='Image'
+                          class='image-fluid'
+                          width='100%'
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

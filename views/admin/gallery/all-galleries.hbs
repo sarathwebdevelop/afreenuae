@@ -1,0 +1,32 @@
+<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+  data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+  <div class="page-wrapper">
+    <div class="container">
+      <br>
+      <h2>Manage Gallery</h2>
+      <br>
+      <a href="/admin/gallery/add-gallery" class="btn btn-primary mb-3">+ Add Image</a>
+
+
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            {{#each galleries}}
+            <div class="col-3">
+              <a href="/images/gallery-images/{{this._id}}.png">
+                <img src="/images/gallery-images/{{this._id}}.png" class="mb-3" style="width: 90%;">
+              </a>
+              <a href="/admin/gallery/delete-gallery/{{this._id}}" class="btn btn-danger"
+                onclick="return confirm('Are You Sure to Delete ?')"><i class="fa fa-trash" aria-hidden="true"></i>
+                Delete</a>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

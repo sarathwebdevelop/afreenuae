@@ -1,0 +1,514 @@
+<style>
+    .breatcome-area {
+        background: url('/img/pbanner.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding: 154px 0;
+    }
+
+    .blog-content.style-two {
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: -16px;
+    }
+
+    .blog-thumb img {
+        width: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: .5s;
+    }
+
+    .blog-single-box.style-two.inner-page {
+        margin-bottom: 30px;
+        border-radius: 14px;
+    }
+
+    .card-image {
+        max-width: 100%;
+        /* Ensures the image doesn't exceed the container's width */
+        max-height: 300px;
+        /* Set the desired maximum height for the image */
+        width: auto;
+        /* Allows the image to scale with its aspect ratio */
+        height: auto;
+        /* Allows the image to scale with its aspect ratio */
+    }
+
+    .blog-thumb img {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: .5s;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1600px) {
+        .blog-title.style-two h4 a {
+            font-size: 16px;
+        }
+    }
+</style>
+<style>
+    .img3 {
+        width: 130px;
+        margin-top: -17px;
+    }
+
+    .footer-area {
+        background-color: #878787;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 109px 0 0px;
+        position: relative;
+    }
+
+    .preview {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 996px) {
+        .preview {
+            margin-bottom: 20px;
+        }
+    }
+
+    .preview-pic {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+
+    .preview-thumbnail.nav-tabs {
+        border: none;
+        margin-top: 15px;
+    }
+
+    .preview-thumbnail.nav-tabs li {
+        width: 18%;
+        margin-right: 2.5%;
+    }
+
+    .preview-thumbnail.nav-tabs li img {
+        max-width: 100%;
+        display: block;
+    }
+
+    .preview-thumbnail.nav-tabs li a {
+        padding: 0;
+        margin: 0;
+    }
+
+    .preview-thumbnail.nav-tabs li:last-of-type {
+        margin-right: 0;
+    }
+
+    .tab-content {
+        overflow: hidden;
+    }
+
+    .tab-content img {
+        width: 100%;
+        -webkit-animation-name: opacity;
+        animation-name: opacity;
+        -webkit-animation-duration: .3s;
+        animation-duration: .3s;
+    }
+
+    .card {
+        margin-top: 50px;
+        background: #eee;
+        padding: 3em;
+        line-height: 1.5em;
+    }
+
+    @media screen and (min-width: 997px) {
+        .wrapper {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+    }
+
+    .details {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .colors {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+
+    .product-title,
+    .price,
+    .sizes,
+    .colors {
+        text-transform: UPPERCASE;
+        font-weight: bold;
+    }
+
+    .checked,
+    .price span {
+        color: #ff9f1a;
+    }
+
+    .product-title,
+    .rating,
+    .product-description,
+    .price,
+    .vote,
+    .sizes {
+        margin-bottom: 15px;
+    }
+
+    .product-title {
+        margin-top: 0;
+    }
+
+    .size {
+        margin-right: 10px;
+    }
+
+    .size:first-of-type {
+        margin-left: 40px;
+    }
+
+    .color {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        height: 2em;
+        width: 2em;
+        border-radius: 2px;
+    }
+
+    .color:first-of-type {
+        margin-left: 20px;
+    }
+
+    .add-to-cart,
+    .like {
+        z-index: 9999999;
+
+        background: #ff9f1a;
+        padding: 1.2em 1.5em;
+        border: none;
+        text-transform: UPPERCASE;
+        font-weight: bold;
+        color: #fff;
+        -webkit-transition: background .3s ease;
+        transition: background .3s ease;
+    }
+
+    .add-to-cart:hover,
+    .like:hover {
+        background: #b36800;
+        color: #fff;
+    }
+
+    .not-available {
+        text-align: center;
+        line-height: 2em;
+    }
+
+    .not-available:before {
+        font-family: fontawesome;
+        content: "\f00d";
+        color: #fff;
+    }
+
+    .orange {
+        background: #ff9f1a;
+    }
+
+    .green {
+        background: #85ad00;
+    }
+
+    .blue {
+        background: #0076ad;
+    }
+
+    .tooltip-inner {
+        padding: 1.3em;
+    }
+
+    @-webkit-keyframes opacity {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(3);
+            transform: scale(3);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    @keyframes opacity {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(3);
+            transform: scale(3);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+</style>
+
+
+<!--==================================================-->
+<!-- Start Thrown Bratcome Area -->
+<!--==================================================-->
+{{!-- <div class="breatcome-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="breatcome-content">
+                    <div class="breatcome-title">
+                        <h1>{{cat}}</h1>
+                    </div>
+                    <div class="bratcome-text">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li>Product/{{products.[0].name}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blog-area style-two">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title text-center">
+                    <div class="section-sub-title">
+                        <h4>Our subproducts</h4>
+                    </div>
+                    <div class="section-main-title">
+                        <h2>{{cat}}
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-single-box style-two inner-page">
+                    <div class="blog" style="padding:20px;">
+                        <a href="/single-product/{{products.[0].name}}">
+                            <center>
+                                <img class="card-image" src="/images/subproduct-images/{{products.[0]._id}}.png"
+                                    style="border-radius:12px;">
+                            </center>
+                        </a>
+                    </div>
+                    <div class="blog-content style-two">
+
+
+                        <h6><a href="#!" style="text-decoration: none;">{{products.[0].name}}</a>
+                        </h6>
+                        <h3>Brand :{{products.[0].brand}}</h3>
+                        <h4>Description</h4>
+                        <p>
+                            {{products.[0].desc}}
+                        </p>
+                        {{!-- <h6 style="display: inline;">Size : </h6>
+                        <span style="display: inline;"> {{this.size}}</span><br>
+
+                        <h6 style="display: inline;">Model No : </h6>
+                        <span style="display: inline;"> {{this.model}}</span><br>
+
+                        <h6 style="display: inline;">Material : </h6>
+                        <span style="display: inline;"> {{this.material}}</span><br><br>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div> --}}
+
+
+
+
+
+<!--==================================================-->
+<!-- End Thrown Sidebar Area -->
+<!--==================================================-->
+
+
+<div class="breatcome-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="breatcome-content">
+                    <div class="breatcome-title">
+                        <h1>{{cat}}</h1>
+                    </div>
+                    <div class="bratcome-text">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li>Product/{{products.[0].name}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="container">
+    <div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+
+                    <div class="preview-pic tab-content">
+                        <a href="/images/product-images/{{products.[0]._id}}.png">
+                            <div class="tab-pane active" id="pic-1"><img
+                                    src="/images/product-images/{{products.[0]._id}}.png" /></div>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="details col-md-6">
+                    <h3 class="product-title" id="productName">{{products.[0].name}}</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <span class="review-no">41 reviews</span>
+                    </div>
+                    <p class="product-description">{{products.[0].desc}}</p>
+                    <h4 class="price">Brand: <span id="brandName">{{products.[0].brand}}</span></h4>
+                    <h4 class="price">Category: <span id="catName">{{products.[0].head}}</span></h4>
+
+                    {{!-- <h5 class="sizes">sizes:
+                        <span class="size" data-toggle="tooltip" title="small">s</span>
+                        <span class="size" data-toggle="tooltip" title="medium">m</span>
+                        <span class="size" data-toggle="tooltip" title="large">l</span>
+                        <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+                    </h5>
+                    <h5 class="colors">colors:
+                        <span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
+                        <span class="color green"></span>
+                        <span class="color blue"></span>
+                    </h5> --}}
+                    <div style="z-index: 9999999;">
+                        <label class="text-dark mb-2" for="quantity">Quantity:</label>
+                        <div style="display: flex; align-items: center;">
+                            <button class="btn btn-sm btn-dark" id="decrementBtn">-</button>
+                            <input type="text" class="form-control w-25" id="quantity" name="quantity" value="1"
+                                readonly style="margin: 0 10px;">
+                            <button class="btn btn-sm btn-dark" id="incrementBtn">+</button>
+                        </div>
+                    </div>
+                    <label class="text-dark mb-2 mt-4" for="company">Company Name :</label>
+                    <input style="z-index: 9999999;" id="company" name="company" class="form-control"
+                        placeholder="Your Company Name" required />
+                    <label class="text-dark mb-2 mt-4" for="message">Message:</label>
+                    <textarea style="z-index: 9999999;" id="message" class="form-control" name="message"></textarea>
+                    <button id="enquiryBtn" class="add-to-cart btn mt-4 btn-default w-100" type="button">Get
+                        Enquiry</button>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    // Get the product name and quantity input
+    var productName = document.getElementById('productName').innerText;
+    var brandName = document.getElementById('brandName').innerText;
+    var catName = document.getElementById('catName').innerText;
+
+    var quantityInput = document.getElementById('quantity');
+    var decrementBtn = document.getElementById('decrementBtn');
+    var incrementBtn = document.getElementById('incrementBtn');
+
+    // Decrement quantity
+    decrementBtn.addEventListener('click', function () {
+        var currentQuantity = parseInt(quantityInput.value);
+        if (currentQuantity > 1) {
+            quantityInput.value = currentQuantity - 1;
+        }
+    });
+
+    // Increment quantity
+    incrementBtn.addEventListener('click', function () {
+        var currentQuantity = parseInt(quantityInput.value);
+        quantityInput.value = currentQuantity + 1;
+    });
+
+    document.getElementById('enquiryBtn').addEventListener('click', function () {
+        var quantity = quantityInput.value;
+        var message = document.getElementById('message').value;
+        var company = document.getElementById('company').value;
+
+        // Concatenate product name with the message
+        var fullMessage = 'Hi Afreen, %0AI want to know more about your products:' +
+            '%0A%0AProduct Name : ' + encodeURIComponent(productName) +
+            '%0ABrand Name : ' + encodeURIComponent(brandName) +
+            '%0ACategory : ' + encodeURIComponent(catName) +
+            '%0A%0AQuantity : ' + encodeURIComponent(quantity) +
+            '%0ACompany Name : ' + encodeURIComponent(company) +
+            '%0AMessage : ' + encodeURIComponent(message);
+
+        // Construct WhatsApp URL
+        var whatsappURL = 'https://wa.me/971526291730?text=' + fullMessage;
+
+        // Open WhatsApp in new tab
+        window.open(whatsappURL);
+    });
+
+</script>
+
+<br><br><br>

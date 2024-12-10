@@ -1,0 +1,93 @@
+<div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+  data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+  <div class="page-wrapper">
+    <div class="container">
+      <br>
+      <h2>Edit product</h2>
+      <br>
+      <a href="/admin/product/all-products" class="btn btn-primary mb-3">Go Back</a>
+
+
+      <div class="card">
+        <div class="card-body">
+
+
+          <form action="/admin/product/edit-product/{{product._id}}" enctype="multipart/form-data" method="POST">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Sub Heading</label>
+              <input type="text" name="name" value="{{product.name}}" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Category</label>
+              <select class="form-select" name="category" value="{{product.category}}"
+                aria-label="Default select example">
+                <option value="{{product.category}}" selected>{{product.category}}</option>
+                {{#each categories}}
+                <option value="{{this.name}}">{{this.name}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Description</label>
+              <input type="text" name="desc" value="{{product.desc}}" class="form-control">
+            </div>
+            {{!-- <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Size</label>
+              <input type="text" name="size" value="{{product.size}}" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Model No</label>
+              <input type="text" name="model" value="{{product.model}}" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Material</label>
+              <input type="text" name="material" value="{{product.material}}" class="form-control">
+            </div> --}}
+
+            <div class="mb-3">
+              <label for="" class="">Img</label><br>
+              <div style="background-color: #ffffff2d; width:50%; padding:10px">
+                <img src="/images/product-images/{{product._id}}.png" alt="" style="width: 6rem; margin-bottom: 8px;"
+                  id="imgView">
+              </div>
+              <input type="file" name="Image" class="form-control" onchange="viewImage(event)">
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-4 w-100">Submit</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function viewImage(event) {
+    document.getElementById("imgView").src = URL.createObjectURL(event.target.files[0]);
+  }
+</script>
+
+<script>
+  const colorPicker = document.getElementById("colorPicker");
+  const colorBox = document.getElementById("colorBox");
+
+  // Initial background color
+  let currentColor = "#000";
+
+  colorPicker.addEventListener("input", function () {
+    // Get the selected color from the color picker
+    const selectedColor = colorPicker.value;
+
+    // Update the background color of the color box and the current color
+    colorBox.style.backgroundColor = selectedColor;
+    currentColor = selectedColor;
+  });
+
+  // Update the color box on page load
+  colorBox.style.backgroundColor = currentColor;
+</script>

@@ -1,0 +1,1181 @@
+{{#each sites}}
+
+<style>
+	.header-munu.style-two ul li a {
+		color: {
+				{
+				this.navtext
+			}
+		}
+
+		;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 500;
+		padding: 35px 0;
+	}
+
+	.header-munu.style-two ul li a:hover {
+		color: {
+				{
+				this.primarycolor
+			}
+		}
+
+		;
+		/* add orange underline on hover */
+
+	}
+
+	.header-munu.style-two ul li a::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		border-bottom: 2px solid #ffA500;
+		/* orange underline color */
+		/* margin top of the underline */
+		transform: scaleX(0);
+		/* initially, the underline is not visible */
+		transition: transform 0.3s;
+		/* transition effect for underline */
+	}
+
+	.project-area.inner-page {
+		padding: 110px 0 0px;
+	}
+
+	.footer-area {
+		background-color: black;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 109px 0 0px;
+		position: relative;
+	}
+
+	.footer-wiget-menu ul li a {
+		display: inline-block;
+		text-decoration: none;
+		transition: .5s;
+		color: #fff;
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 36px;
+		transition: .5s;
+		margin: 0;
+	}
+
+	.mean-container .mean-bar::before {
+		color: #fff;
+		background-image: url('images/logo.jpg');
+		/* Replace 'path/to/your/logo.png' with the actual path to your logo image */
+		background-size: contain;
+		/* Adjust the background-size property based on your needs */
+		background-repeat: no-repeat;
+		width: 100px;
+		/* Set the width of your logo */
+		height: 40px;
+		/* Set the height of your logo */
+		left: 10px;
+		position: absolute;
+		top: 18px;
+	}
+
+	.header-munu.style-two .sub-menu ul li a::after {
+		content: '';
+	}
+
+	.header-munu.style-two ul li a:hover::after {
+		transform: scaleX(1);
+		/* make the underline visible on hover */
+
+	}
+
+	@media (min-width: 1200px) and (max-width: 1600px) {
+		.header-munu.style-two ul li {
+			margin-left: 9px;
+		}
+	}
+
+	.dropdown:hover>.dropdown-menu {
+		display: block;
+	}
+
+	.dropdown>.dropdown-toggle:active {
+		/*Without this, clicking will make it sticky*/
+		pointer-events: none;
+	}
+
+	.btn2 {
+		background-color: transparent;
+		color: white;
+		border: 0px;
+	}
+
+	.topbar-adress ul li a {
+		color: var(--white, #FFF);
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		display: inline-block;
+		text-decoration: none;
+		position: relative;
+	}
+
+	.topbar-area.style-two {
+		background: var(--black, #ffffff);
+		padding: 25px 0;
+		z-index: 0;
+	}
+
+	.topbar-adress ul li a:hover {
+		background-color: #F60;
+		color: white;
+		padding: 3px;
+	}
+
+	.topbar-adress ul li a::before {
+		position: absolute;
+		content: "";
+		left: -18px;
+		color: #fff;
+	}
+
+	/* CSS Multiple Whatsapp Chat */
+	.whatsapp-name {
+		font-size: 16px;
+		font-weight: 600;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		line-height: 0.5;
+	}
+
+	#whatsapp-chat {
+		z-index: 99999;
+
+		box-sizing: border-box !important;
+		outline: none !important;
+		position: fixed;
+		width: 350px;
+		border-radius: 10px;
+		box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+		bottom: 90px;
+		right: 30px;
+		overflow: hidden;
+		animation-name: showchat;
+		animation-duration: 1s;
+		transform: scale(1);
+	}
+
+	a.blantershow-chat {
+		/*   background: #009688; 
+		 background: #fff;
+		color: #404040;
+		text-decoration: none;
+		position: fixed;
+		display: flex;
+		font-weight: 400;
+		justify-content: space-between;
+		z-index: 9999;
+		bottom: 25px;
+		right: 30px;
+		font-size: 15px;
+		padding: 10px 20px;
+		border-radius: 30px;
+		box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28); */
+	}
+
+	a.blantershow-chat svg {
+		transform: scale(1.2);
+		margin: 0 10px 0 0;
+	}
+
+	.header-chat {
+		/*   background: linear-gradient(to right top, #6f96f3, #164ed2); */
+		background: #fff;
+		background: #fff;
+		color: #000;
+		padding: 20px;
+	}
+
+	.header-chat h3 {
+		margin: 0 0 10px;
+	}
+
+	.header-chat p {
+		font-size: 14px;
+		color: #000;
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	.info-avatar {
+		position: relative;
+	}
+
+	.info-avatar img {
+		border-radius: 100%;
+		width: 50px;
+		float: left;
+		margin: 0 10px 0 0;
+	}
+
+	a.informasi {
+		padding: 20px;
+		display: block;
+		overflow: hidden;
+		animation-name: showhide;
+		animation-duration: 0.5s;
+	}
+
+	a.informasi:hover {
+		background: #f1f1f1;
+	}
+
+	.info-chat span {
+		display: block;
+	}
+
+	#get-label,
+	span.chat-label {
+		font-size: 12px;
+		color: #888;
+	}
+
+	#get-nama,
+	span.chat-nama {
+		margin: 5px 0 0;
+		font-size: 15px;
+		font-weight: 700;
+		color: #222;
+	}
+
+	#get-label,
+	#get-nama {
+		color: #fff;
+	}
+
+	span.my-number {
+		display: none;
+	}
+
+	/* .blanter-msg {
+  color: #444;
+  padding: 20px;
+  font-size: 12.5px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+} */
+	textarea#chat-input {
+		border: none;
+		font-family: 'Arial', sans-serif;
+		width: 100%;
+		height: 50px;
+		outline: none;
+		color: black;
+		resize: none;
+		padding: 10px;
+		font-size: 14px;
+	}
+
+	a#send-it {
+		width: 50px;
+		font-weight: 700;
+		padding: 10px 10px 0;
+		background: #4cae50;
+		border-radius: 0px;
+
+		svg {
+			fill: #ffffff;
+			height: 24px;
+			width: 24px;
+		}
+	}
+
+	.first-msg {
+		background: transparent;
+		padding: 30px;
+		text-align: center;
+
+		& span {
+			background: #e2e2e2;
+			color: #333;
+			font-size: 14.2px;
+			line-height: 1.7;
+			border-radius: 10px;
+			padding: 15px 20px;
+			display: inline-block;
+		}
+	}
+
+	.start-chat .blanter-msg {
+		display: flex;
+	}
+
+	#get-number {
+		display: none;
+	}
+
+	a.close-chat {
+		position: absolute;
+		top: 5px;
+		right: 15px;
+		color: #000;
+		text-decoration: none;
+		font-size: 30px;
+	}
+
+	@keyframes ZpjSY {
+		0% {
+			background-color: rgb(182, 181, 186);
+		}
+
+		15% {
+			background-color: rgb(17, 17, 17);
+		}
+
+		25% {
+			background-color: rgb(182, 181, 186);
+		}
+	}
+
+	@keyframes hPhMsj {
+		15% {
+			background-color: rgb(182, 181, 186);
+		}
+
+		25% {
+			background-color: rgb(17, 17, 17);
+		}
+
+		35% {
+			background-color: rgb(182, 181, 186);
+		}
+	}
+
+	@keyframes iUMejp {
+		25% {
+			background-color: rgb(182, 181, 186);
+		}
+
+		35% {
+			background-color: rgb(17, 17, 17);
+		}
+
+		45% {
+			background-color: rgb(182, 181, 186);
+		}
+	}
+
+	@keyframes showhide {
+		from {
+			transform: scale(0.5);
+			opacity: 0;
+		}
+	}
+
+	@keyframes showchat {
+		from {
+			transform: scale(0);
+			opacity: 0;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		#whatsapp-chat {
+			z-index: 99999;
+
+			width: auto;
+			left: 5%;
+			right: 5%;
+			font-size: 80%;
+		}
+	}
+
+	.hide {
+		display: none;
+		animation-name: showhide;
+		animation-duration: 0.5s;
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	.show {
+		display: block;
+		animation-name: showhide;
+		animation-duration: 0.5s;
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	.whatsapp-message-container {
+		display: flex;
+		z-index: 1;
+	}
+
+	.whatsapp-message {
+		padding: 7px 14px 6px;
+		background-color: rgb(255, 255, 255);
+		border-radius: 0px 8px 8px;
+		position: relative;
+		transition: all 0.3s ease 0s;
+		opacity: 0;
+		transform-origin: center top 0px;
+		z-index: 2;
+		box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
+		margin-top: 4px;
+		margin-left: -54px;
+		max-width: calc(100% - 66px);
+	}
+
+	.whatsapp-chat-body {
+		padding: 20px 20px 20px 10px;
+		background-color: rgb(255, 255, 255);
+		position: relative;
+
+		&::before {
+			display: block;
+			position: absolute;
+			content: '';
+			left: 0px;
+			top: 0px;
+			height: 100%;
+			width: 100%;
+			z-index: 0;
+			opacity: 0.08;
+			background-image: url('https://elfsight.com/assets/chats/patterns/whatsapp.png');
+			// background-image: url(https://res.cloudinary.com/eventbree/image/upload/v1575782560/Widgets/whatsappbg_opt.jpg);
+		}
+	}
+
+	.dAbFpq {
+		display: flex;
+		z-index: 1;
+	}
+
+	.eJJEeC {
+		background-color: rgb(255, 255, 255);
+		width: 52.5px;
+		height: 32px;
+		border-radius: 16px;
+		display: flex;
+		-moz-box-pack: center;
+		justify-content: center;
+		-moz-box-align: center;
+		align-items: center;
+		margin-left: 10px;
+		opacity: 0;
+		transition: all 0.1s ease 0s;
+		z-index: 1;
+		box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
+	}
+
+	.hFENyl {
+		position: relative;
+		display: flex;
+	}
+
+	.ixsrax {
+		height: 5px;
+		width: 5px;
+		margin: 0px 2px;
+		border-radius: 50%;
+		display: inline-block;
+		position: relative;
+		animation-duration: 1.2s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		top: 0px;
+		background-color: rgb(158, 157, 162);
+		animation-name: ZpjSY;
+	}
+
+	.dRvxoz {
+		height: 5px;
+		width: 5px;
+		margin: 0px 2px;
+		background-color: rgb(182, 181, 186);
+		border-radius: 50%;
+		display: inline-block;
+		position: relative;
+		animation-duration: 1.2s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		top: 0px;
+		animation-name: hPhMsj;
+	}
+
+	.kAZgZq {
+		padding: 7px 14px 6px;
+		background-color: rgb(232, 232, 232);
+		border-radius: 0px 8px 8px;
+		position: relative;
+		transition: all 0.3s ease 0s;
+		opacity: 0;
+		transform-origin: center top 0px;
+		z-index: 2;
+		box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
+		margin-top: 4px;
+		margin-left: -54px;
+		max-width: calc(100% - 66px);
+
+		&::before {
+			position: absolute;
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAMAAADp2asXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACQUExURUxpccPDw9ra2m9vbwAAAAAAADExMf///wAAABoaGk9PT7q6uqurqwsLCycnJz4+PtDQ0JycnIyMjPf3915eXvz8/E9PT/39/RMTE4CAgAAAAJqamv////////r6+u/v7yUlJeXl5f///5ycnOXl5XNzc/Hx8f///xUVFf///+zs7P///+bm5gAAAM7Ozv///2fVensAAAAvdFJOUwCow1cBCCnqAhNAnY0WIDW2f2/hSeo99g1lBYT87vDXG8/6d8oL4sgM5szrkgl660OiZwAAAHRJREFUKM/ty7cSggAABNFVUQFzwizmjPz/39k4YuFWtm55bw7eHR6ny63+alnswT3/rIDzUSC7CrAziPYCJCsB+gbVkgDtVIDh+DsE9OTBpCtAbSBAZSEQNgWIygJ0RgJMDWYNAdYbAeKtAHODlkHIv997AkLqIVOXVU84AAAAAElFTkSuQmCC');
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: '';
+			top: 0px;
+			left: -12px;
+			width: 12px;
+			height: 19px;
+		}
+	}
+
+	.bMIBDo {
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 18px;
+		color: rgba(0, 0, 0, 0.4);
+	}
+
+	.iSpIQi {
+		font-size: 14px;
+		line-height: 19px;
+		margin-top: 4px;
+		color: rgb(17, 17, 17);
+	}
+
+	.iSpIQi {
+		font-size: 14px;
+		line-height: 19px;
+		margin-top: 4px;
+		color: rgb(17, 17, 17);
+	}
+
+	.cqCDVm {
+		text-align: right;
+		margin-top: 4px;
+		font-size: 12px;
+		line-height: 16px;
+		color: rgba(17, 17, 17, 0.5);
+		margin-right: -8px;
+		margin-bottom: -4px;
+	}
+
+	.ml2 {
+		font-weight: 900;
+		font-size: 3.5em;
+	}
+
+	.ml2 .letter {
+		display: inline-block;
+		line-height: 1em;
+	}
+</style>
+{{/each}}
+
+
+
+<div id='whatsapp-chat' class='hide'>
+	<div class='header-chat'>
+		{{!-- <div class='head-home'>
+			<div class='info-avatar'><img src='assets/img/logo2.png' />
+			</div>
+			<p><span class="whatsapp-name">Afreen</span><br><small>Typically replies within an hour</small></p>
+
+		</div> --}}
+		<div class='get-new hide'>
+			<div id='get-label'></div>
+			<div id='get-nama'></div>
+		</div>
+	</div>
+	<div class='home-chat'>
+
+	</div>
+	<div class='start-chat'>
+		<div pattern="https://elfsight.com/assets/chats/patterns/whatsapp.png"
+			class="WhatsappChat__Component-sc-1wqac52-0 whatsapp-chat-body">
+			<div class="WhatsappChat__MessageContainer-sc-1wqac52-1 dAbFpq">
+				<div style="opacity: 0;" class="WhatsappDots__Component-pks5bf-0 eJJEeC">
+					<div class="WhatsappDots__ComponentInner-pks5bf-1 hFENyl">
+						<div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotOne-pks5bf-3 ixsrax"></div>
+						<div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotTwo-pks5bf-4 dRvxoz"></div>
+						<div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotThree-pks5bf-5 kXBtNt"></div>
+					</div>
+				</div>
+				<div style="opacity: 1;" class="WhatsappChat__Message-sc-1wqac52-4 kAZgZq">
+					<div class="WhatsappChat__Author-sc-1wqac52-3 bMIBDo">Afreen </div>
+					<div class="WhatsappChat__Text-sc-1wqac52-2 iSpIQi">Hi there 👋<br><br>How can I help you?</div>
+					<div class="WhatsappChat__Time-sc-1wqac52-5 cqCDVm">1:40</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='blanter-msg'>
+			<textarea id='chat-input' placeholder='Write a response' maxlength='120' row='1'></textarea>
+			<a href='javascript:void;' id='send-it'><svg viewBox="0 0 448 448">
+					<path d="M.213 32L0 181.333 320 224 0 266.667.213 416 448 224z" />
+				</svg></a>
+
+		</div>
+	</div>
+	<div id='get-number'></div><a class='close-chat' href='javascript:void'>×</a>
+</div>
+{{!-- <a class='blantershow-chat' href='javascript:void' title='Show Chat'><svg width="20" viewBox="0 0 24 24"> --}}
+		{{!--
+		<defs />
+		<path fill="#eceff1"
+			d="M20.5 3.4A12.1 12.1 0 0012 0 12 12 0 001.7 17.8L0 24l6.3-1.7c2.8 1.5 5 1.4 5.8 1.5a12 12 0 008.4-20.3z" />
+		<path fill="#4caf50"
+			d="M12 21.8c-3.1 0-5.2-1.6-5.4-1.6l-3.7 1 1-3.7-.3-.4A9.9 9.9 0 012.1 12a10 10 0 0117-7 9.9 9.9 0 01-7 16.9z" />
+		<path fill="#fafafa"
+			d="M17.5 14.3c-.3 0-1.8-.8-2-.9-.7-.2-.5 0-1.7 1.3-.1.2-.3.2-.6.1s-1.3-.5-2.4-1.5a9 9 0 01-1.7-2c-.3-.6.4-.6 1-1.7l-.1-.5-1-2.2c-.2-.6-.4-.5-.6-.5-.6 0-1 0-1.4.3-1.6 1.8-1.2 3.6.2 5.6 2.7 3.5 4.2 4.2 6.8 5 .7.3 1.4.3 1.9.2.6 0 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z" />
+	</svg> Chat with Us</a> --}}
+
+<style>
+	.sticky-icon {
+		z-index: 9999;
+		position: fixed;
+		top: 175px;
+		right: 0%;
+		width: 220px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.sticky-icon a {
+		transform: translate(160px, 0px);
+		border-radius: 50px 0px 0px 50px;
+		text-align: left;
+		margin: 2px;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 10px;
+		font-size: 22px;
+		font-family: 'Oswald', sans-serif;
+		transition: all 0.8s;
+	}
+
+	.sticky-icon a:hover {
+		color: #FFF;
+		transform: translate(0px, 0px);
+	}
+
+	.sticky-icon a:hover i {
+		transform: rotate(360deg);
+	}
+
+	/*.search_icon a:hover i  {
+	transform:rotate(360deg);}*/
+	.Facebook {
+		background-color: #2C80D3;
+		color: #FFF;
+	}
+
+	.Youtube {
+		background-color: #fa0910;
+		color: #FFF;
+	}
+
+	.Twitter {
+		background-color: #53c5ff;
+		color: #FFF;
+	}
+
+	.Instagram {
+		background-color: #FD1D1D;
+		color: #FFF;
+	}
+
+	.Google {
+		background-color: #595959;
+		color: #FFF;
+	}
+
+	.WhatsApp {
+		background-color: #4cae50;
+		color: #FFF;
+	}
+
+	.Google {
+		background-color: #d34836;
+		color: #FFF;
+	}
+
+	.sticky-icon a i {
+		background-color: #FFF;
+		height: 40px;
+		width: 40px;
+		color: #000;
+		text-align: center;
+		line-height: 40px;
+		border-radius: 50%;
+		margin-right: 20px;
+		transition: all 0.5s;
+	}
+
+	.sticky-icon a i.fa-facebook-f {
+		background-color: #FFF;
+		color: #2C80D3;
+	}
+
+	.sticky-icon a i.fa-google-plus-g {
+		background-color: #FFF;
+		color: #d34836;
+	}
+
+	.sticky-icon a i.fa-instagram {
+		background-color: #FFF;
+		color: #FD1D1D;
+	}
+
+	.sticky-icon a i.fa-google {
+		background-color: #FFF;
+		color: #595959;
+	}
+
+	.sticky-icon a i.fa-youtube {
+		background-color: #FFF;
+		color: #fa0910;
+	}
+
+	.sticky-icon a i.fa-twitter {
+		background-color: #FFF;
+		color: #53c5ff;
+	}
+
+	.fas fa-shopping-cart {
+		background-color: #FFF;
+	}
+
+	#myBtn {
+		height: 50px;
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 30px;
+		z-index: 99;
+		text-align: center;
+		padding: 10px;
+		text-align: center;
+		line-height: 40px;
+		border: none;
+		outline: none;
+		background-color: #1e88e5;
+		color: white;
+		cursor: pointer;
+		border-radius: 50%;
+	}
+
+	.fa-arrow-circle-up {
+		font-size: 30px;
+	}
+
+	#myBtn:hover {
+		background-color: #555;
+	}
+
+	.card-footer {
+		padding: 0.5rem 1rem;
+		border-radius: 20px;
+		background-color: rgb(0 0 0 / 59%);
+		border-top: 1px solid rgba(0, 0, 0, .125);
+	}
+
+	.card-footer:last-child {
+		border-radius: 20px;
+	}
+</style>
+
+<div class="sticky-icon">
+
+	<a href="https://www.youtube.com/@AfreenBuildingMaterials-ol5kh" class="Youtube"><i class="fab fa-youtube"></i>
+		Youtube </a>
+
+	<a href="https://www.instagram.com/afreenauh/?utm_source=qr&igshid=OWM2ZWI5NDFkNA%3D%3D" class="Instagram"><i
+			class="fab fa-instagram"></i> Instagram </a>
+
+	<a href="mailto:sales@afreenuae.com" class="Google"><i class="fas fa-at"> </i>
+		Email </a>
+
+
+
+	<a href="https://www.facebook.com/afreenauh?mibextid=9R9pXO" class="Facebook"><i class="fab fa-facebook-f"> </i>
+		Facebook </a>
+
+	<a href="https://www.linkedin.com/company/afreen-building-materials/" class="Twitter"><i class="fab fa-linkedin">
+		</i> Linked In </a>
+
+	<a href='javascript:void' title='Show Chat' class="blantershow-chat WhatsApp"><i class="fab fa-whatsapp"></i>
+		WhatsApp </a>
+
+
+
+</div>
+<!--End Sticky Icon-->
+
+<!-- loder -->
+<div class="loader-wrapper">
+	<div class="loader"></div>
+	<div class="loder-section left-section"></div>
+	<div class="loder-section right-section"></div>
+</div>
+<!--==================================================-->
+<!-- Start Euildint Top Bar Style Two Area -->
+<!--==================================================-->
+<div class="topbar-area style-two d-flex align-items-center">
+	<div class="container-fluid p-90">
+		<div class="row align-items-center">
+			<div class="col-lg-12 col-md-12">
+				<div class="topbar-adress">
+					<ul>
+
+
+						{{!-- <li class="line text-white">Address : P.O. Box: 35417, M9 -
+
+							Mussafah Abu Dhabi -UAE
+
+						</li> --}}
+						{{!-- <li>
+							<div class="dropdown">
+								<button class="btn2  dropdown-toggle" style="font-size: 16px;" type="button"
+									id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+									Contact Emails
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<li><a class="dropdown-item text-dark" href="mailto:sales@afreenuae.com"><i
+												class="bi bi-envelope"></i> sales@afreenuae.com</a></li>
+									<li><a class="dropdown-item text-dark" href="mailto:accounts@afreenuae.com"><i
+												class="bi bi-envelope"></i> accounts@afreenuae.com</a></li>
+									<li><a class="dropdown-item text-dark" href="mailto:purchase@afreenuae.com"><i
+												class="bi bi-envelope"></i> purchase@afreenuae.com</a></li><br>
+
+								</ul>
+							</div>
+						</li> --}}
+
+						{{!-- <li>
+							<div class="dropdown">
+								<button class="btn2  dropdown-toggle" style="font-size: 16px;" type="button"
+									id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+									Contact Numbers
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<li><a class="dropdown-item text-dark" href="tel:97122049016"><i
+												class="bi bi-telephone"></i> Tele -
+											(+971) 22049016</a></li>
+									<li><a class="dropdown-item text-dark" href="tel:97125559315"><i
+												class="bi bi-telephone"></i> Fax-
+											(+971) 25559315</a></li>
+									<li><a class="dropdown-item text-dark" href="tel:971526291730"><i
+												class="bi bi-telephone"></i> Mobile
+											-(+971) 526291730</a></li><br>
+
+								</ul>
+							</div>
+						</li> --}}
+						{{!-- <li style="margin-left: 812px;"><a
+								href="https://www.linkedin.com/company/afreen-building-materials/" target="_blank"><i
+									class="text-dark bi bi-linkedin"></i></a></li>
+						<li><a href="https://www.facebook.com/afreenauh?mibextid=9R9pXO" target="_blank"><i
+									class="text-dark bi bi-facebook"></i></a></li>
+						<li><a href="https://instagram.com/afreenauh?utm_source=qr&igshid=OWM2ZWI5NDFkNA=="
+								target="_blank"><i class="text-dark bi bi-instagram"></i></a></li> --}}
+
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!--==================================================-->
+<!-- End Euildint Top Bar Style Two Area -->
+<!--==================================================-->
+<style>
+	.btnn {
+		display: inline;
+		text-decoration: none;
+		color: #FFF;
+		font-size: 18px;
+		font-weight: 500;
+		background: rgb(0, 0, 0);
+		padding: 10px 24px;
+		margin-left: 24px;
+		border-radius: 3px;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		transition: .5s;
+	}
+
+	.btnn:hover {
+
+		color: #000000;
+		background: rgb(255, 255, 255);
+		transition: .5s;
+	}
+</style>
+<!--==================================================-->
+<!-- Start Euildint Header Style Two Area -->
+<!--==================================================-->
+<div class="header-area style-two" id="navbar">
+	<div class=" ">
+		<div class="row align-items-center">
+			<div class="col-lg-9">
+				<div class="header-logo">
+					<a href="/"><img src="/images/logo.jpg" style="margin-top: -64px;" width="400px" class="mb-3"
+							alt="logo"></a>
+				</div>
+			</div>
+			<div class="col-lg-1">
+				<div class="header-logo mb-5">
+					<a href="/"><img src="/img/verify.png" width="200px" alt="logo"></a>
+				</div>
+			</div>
+
+			<div class="">
+				<style>
+					.header-munu ul>li:not(:last-child)::after {
+						content: " | ";
+						margin: 0 8px;
+						/* Adjust the spacing as needed */
+					}
+
+					.header-munu .sub-menu ul>li:not(:last-child)::after {
+						content: "";
+						margin: 0 0px;
+						/* Adjust the spacing as needed */
+					}
+
+					.header-munu ul {
+						list-style: none;
+						display: inline-block;
+						margin-right: 153px;
+					}
+
+					.header-munu ul .sub-menu {
+						background: #fff;
+						position: absolute;
+						top: 125%;
+						border-radius: 5px;
+						width: 504px;
+						text-align: left;
+						margin: 0;
+						-webkit-box-shadow: 0px 1px 3px rgb(0 0 0 / 30%);
+						transition: .5s;
+						visibility: hidden;
+						border-top: 2px solid #F60;
+						opacity: 0;
+						z-index: 11;
+					}
+
+					.header-munu.style-two ul li a:before {
+						background: #00000000;
+					}
+				</style>
+				{{#each sites}}
+				<div class="header-munu style-two"
+					style="background-color:{{this.btncolor}}; padding-right:30px; width:100%; left:0%; right:0%; ">
+					{{/each}}
+					<ul>
+						<li><a href="/" class="">Home</a></li>
+						<li><a href="/about-us" class="">About</a></li>
+						{{!-- <li><a href="/brands" class="">Brands</a></li> --}}
+						<li><a href="/brands" class="">Brands <i class="bi bi-plus"></i></a>
+							<div class="sub-menu">
+								<ul>
+									{{#each brands}}
+									<li><a href="/brd-view/{{this.name}}">{{this.name}}</a></li>
+									{{/each}}
+								</ul>
+							</div>
+						</li>
+
+						{{!-- <li><a href="/Pumps-and-MEP-Works" class="">Pumps and MEP Works</a></li> --}}
+						<li><a href="/products" class="">Products <i class="bi bi-plus"></i></a>
+							<div class="sub-menu">
+								<ul>
+									{{#each categories}}
+									<li><a href="/prd-view/{{this.name}}">{{this.name}}</a></li>
+									{{/each}}
+								</ul>
+							</div>
+						</li>
+						{{!-- <li><a href="/brands" class="">Brands <i class="bi bi-plus"></i></a>
+							<div class="sub-menu">
+								<ul>
+									{{#each brands}}
+									<li><a href="/brd-view/{{this.name}}">{{this.name}}</a></li>
+									{{/each}}
+								</ul>
+							</div>
+						</li> --}}
+						<li><a href="/pump" class=""> Pumps<i class="bi bi-plus"></i></a>
+							<div class="sub-menu">
+								<ul>
+									<li><a href="/pump">Booster Pumps</a></li>
+									<li><a href="/pump">Transfer Pumps</a></li>
+									<li><a href="/pump">Circulation Pumps</a></li>
+									<li><a href="/pump">Submersible Pumps</a></li>
+									<li><a href="/pump">Mono Block Pumps</a></li>
+									<li><a href="/pump">Irrigation Pumps</a></li>
+									<li><a href="/pump">Control Panels</a></li>
+									<li><a href="/pump">VFD Systems</a></li>
+									<li><a href="/pump">Pressure Tanks</a></li>
+
+								</ul>
+							</div>
+						</li>
+						<li><a href="/mep" class=""> MEP Services<i class="bi bi-plus"></i></a>
+							<div class="sub-menu">
+								<ul>
+									<li><a href="/mep">HDPE But Fusion & Electro Fusion Welding</a></li>
+									<li><a href="/mep">Pump Testing & Commissioning</a></li>
+									<li><a href="/mep">Pump stations services</a></li>
+									<li><a href="/mep">Plumbing Works</a></li>
+									<li><a href="/mep">PVC & HDPE Fabrication</a></li>
+									<li><a href="/mep">Central Water Heating & Cooling Systems</a></li>
+									<li><a href="/mep">Solar Water Heater Installation</a></li>
+									<li><a href="/mep">Water Filtering Systems</a></li>
+
+								</ul>
+							</div>
+						</li>
+						<li><a href="#" class=""> More <i class="bi bi-plus"></i></a>
+							<div class="sub-menu">
+								<ul>
+									<li><a href="/gallery">Gallery</a></li>
+									<li><a href="/store">Store</a></li>
+
+
+								</ul>
+							</div>
+						</li>
+
+						<li><a href="/contact" class=""> Contact Us <i class="bi bi-plus"></i></a>
+							<div class="sub-menu">
+								<ul>
+									<li><a href="tel:97122049016"><i class="bi bi-telephone"></i> Tele (+971)
+											22049016</a></li>
+									<li><a href="tel:97125559315"><i class="bi bi-telephone-outbound"></i> Fax (+971)
+											25559315</a></li>
+
+									<li><a href="tel:971526291730"><i class="bi bi-phone"></i> Mobile
+											(+971) 526291730</a></li>
+									<li><a href="mailto:sales@afreenuae.com"><i class="bi bi-envelope"></i>
+											sales@afreenuae.com
+										</a></li>
+
+									<li><a href="mailto:accounts@afreenuae.com"><i class="bi bi-envelope"></i>
+											accounts@afreenuae.com
+										</a></li>
+									<li><a href="mailto:purchase@afreenuae.com"><i class="bi bi-envelope"></i>
+											purchase@afreenuae.com
+										</a></li>
+
+
+								</ul>
+							</div>
+						</li>
+
+
+						{{!--
+						<li><a href="#" class=""> More <i class="bi bi-plus"></i></a>
+							<div class="sub-menu">
+								<ul>
+								</ul>
+							</div>
+						</li> --}}
+					</ul>
+					{{!-- <div class="header-social style-two">
+
+						<a href="/#contact" class="btnn">Contact Us <i class="bi bi-arrow-up-right-circle-fill"></i></a>
+					</div> --}}
+				</div>
+				<!-- end header menu -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Mobile Menu Area -->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+	<center>
+		<img src="images/logo.jpg" width="70%">
+	</center>
+	<div class="mobile-menu">
+		<nav class="Edulin_menu">
+			<ul class="nav_scroll">
+				<li><a href="/" class="text-dark">Home</a></li>
+				<li><a href="/about-us" class="text-dark">About</a></li>
+				<li><a href="/brands" class="text-dark">Brands</a></li>
+
+				{{!-- <li><a href="/Pumps-and-MEP-Works" class="text-dark">Pumps and MEP Works</a></li> --}}
+
+				<li><a href="/products" class="text-dark">Products <i class="bi bi-plus"></i></a>
+					<div class="sub-menu">
+						<ul>
+							{{#each categories}}
+							<li><a href="/prd-view/{{this.name}}">{{this.name}}</a></li>
+							{{/each}}
+						</ul>
+					</div>
+				</li>
+
+				<li><a href="#" class="text-dark"> Pumps <i class="bi bi-plus"></i></a>
+					<div class="sub-menu">
+						<ul>
+							<li><a href="#!">Booster Pumps</a></li>
+							<li><a href="#!">Transfer Pumps</a></li>
+							<li><a href="#!">Circulation Pumps</a></li>
+							<li><a href="#!">Submersible Pumps</a></li>
+							<li><a href="#!">Mono Block Pumps</a></li>
+							<li><a href="#!">Irrigation Pumps</a></li>
+							<li><a href="#!">Control Panels</a></li>
+							<li><a href="#!">VFD Systems</a></li>
+							<li><a href="#!">Pressure Tanks</a></li>
+
+						</ul>
+					</div>
+				</li>
+				<li><a href="#" class="text-dark"> Mep Services <i class="bi bi-plus"></i></a>
+					<div class="sub-menu">
+						<ul>
+							<li><a href="#!">HDPE But Fusion & Electro Fusion Welding</a></li>
+							<li><a href="#!">Pump Testing & Commissioning</a></li>
+							<li><a href="#!">Pump stations services</a></li>
+							<li><a href="#!">Plumbing Works</a></li>
+							<li><a href="#!">PVC & HDPE Fabrication</a></li>
+							<li><a href="#!">Central Water Heating & Cooling Systems</a></li>
+							<li><a href="#!">Solar Water Heater Installation</a></li>
+							<li><a href="#!">Water Filtering Systems</a></li>
+
+						</ul>
+					</div>
+				</li>
+				<li><a href="#" class="text-dark"> More <i class="bi bi-plus"></i></a>
+					<div class="sub-menu">
+						<ul>
+							<li><a href="/gallery">Gallery</a></li>
+							<li><a href="/store">Store</a></li>
+							{{!-- <li><a href="/brands">Brands</a></li> --}}
+
+
+						</ul>
+					</div>
+				</li>
+				<li><a href="/gallery" class="text-dark">Gallery</a></li>
+
+				<li><a href="#contact" class="text-dark">Contact Us</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<!--==================================================-->
+<!-- End Euildint Header Style Two Area -->
+<!--==================================================-->
